@@ -106,7 +106,6 @@ bot.close()
 ├── scheduler.db         # スケジューラー状態（自動生成）
 ├── app.log              # アプリケーションログ（自動生成）
 └── README.md            # このファイル
-└── vercel.json         # Vercelデプロイ設定
 └── index.html          # Vercelで表示する静的ページ
 └── api/                # Vercel Python APIエンドポイント
     ├── status.py
