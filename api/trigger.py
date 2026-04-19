@@ -14,6 +14,3 @@ def handler(request):
         "status": "ok",
         "message": "This route is deployed on Vercel. Mercari automation cannot be executed in Vercel because it requires browser automation (Chrome/Selenium). Use a local or dedicated server deployment instead."
     }
-
-app = handler
-application = handler

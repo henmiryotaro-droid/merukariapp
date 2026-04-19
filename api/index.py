@@ -15,7 +15,3 @@ def handler(request):
         "status": "ok",
         "message": "Vercel deploy is active. Mercari automation itself requires Selenium and Chrome and must run on a local or dedicated server."
     }
-
-
-app = handler
-application = handler
