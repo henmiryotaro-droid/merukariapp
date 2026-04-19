@@ -64,7 +64,17 @@ MERCARI_PASSWORD=your_password
 python main.py
 ```
 
-アプリが起動すると、毎日9:00に自動的に値下げが実行されます。
+アプリが起動すると、毎日21:00に自動的に値下げが実行されます。
+
+### Vercelへのデプロイ
+
+このリポジトリは、Vercelにデプロイして静的ページとPython APIエンドポイントを公開できるように構成されています。
+
+- ルートURL: `index.html` による簡易ドキュメントページ
+- APIエンドポイント: `/api/status`, `/api/trigger`
+
+> ただし、Mercariのブラウザ自動化（Selenium + Chrome）はVercelのサーバーレス環境では実行できません。
+> 実際の値下げ処理はローカル実行や専用サーバーでの実行をおすすめします。
 
 ### 手動での値下げテスト
 
@@ -96,6 +106,11 @@ bot.close()
 ├── scheduler.db         # スケジューラー状態（自動生成）
 ├── app.log              # アプリケーションログ（自動生成）
 └── README.md            # このファイル
+└── vercel.json         # Vercelデプロイ設定
+└── index.html          # Vercelで表示する静的ページ
+└── api/                # Vercel Python APIエンドポイント
+    ├── status.py
+    └── trigger.py
 ```
 
 ## 設定のカスタマイズ

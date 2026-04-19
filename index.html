@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercari 100円値下げ App</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f7fafc; color: #111827; margin: 0; padding: 2rem; }
+    .container { max-width: 760px; margin: 0 auto; }
+    h1 { margin-bottom: 0.5rem; }
+    p { line-height: 1.7; }
+    a.button { display: inline-block; margin: 0.5rem 0; padding: 0.9rem 1.2rem; background: #2563eb; color: #fff; border-radius: 8px; text-decoration: none; }
+    .note { background: #e2e8f0; padding: 1rem; border-radius: 10px; margin-top: 1.5rem; }
+    .footer { margin-top: 2rem; font-size: 0.95rem; color: #4b5563; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mercari 100円値下げ App</h1>
+    <p>このリポジトリは Vercel 上でホスティングできるように構成されています。Vercel 上では Python API エンドポイントが動作しますが、Mercari のブラウザ自動化はローカル実行が必要です。</p>
+
+    <a class="button" href="/api/status">API Status</a>
+    <a class="button" href="/api/trigger">Trigger Check</a>
+
+    <div class="note">
+      <strong>注意:</strong>
+      <ul>
+        <li>Mercari の値下げ自動化は Selenium と Chrome を必要とします。</li>
+        <li>Vercel のサーバーレス環境ではブラウザ自動化はサポートされません。</li>
+        <li>このページは Vercel デプロイの確認用です。</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p>Use <code>git clone https://github.com/henmiryotaro-droid/merukariapp.git</code> to get the repository and run locally.</p>
+      <p>If you want to run the Mercari automation itself, deploy the project to a server or local environment that supports Chrome and Selenium.</p>
+    </div>
+  </div>
+</body>
+</html>
