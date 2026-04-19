@@ -1,4 +1,6 @@
+import json
 import os
+
 
 def handler(request):
     email = os.getenv('MERCARI_EMAIL')
@@ -14,3 +16,13 @@ def handler(request):
         "status": "ok",
         "message": "This route is deployed on Vercel. Mercari automation cannot be executed in Vercel because it requires browser automation (Chrome/Selenium). Use a local or dedicated server deployment instead."
     }
+
+
+def app(environ, start_response):
+    response = handler(None)
+    body = json.dumps(response).encode('utf-8')
+    start_response('200 OK', [('Content-Type', 'application/json')])
+    return [body]
+
+
+application = app

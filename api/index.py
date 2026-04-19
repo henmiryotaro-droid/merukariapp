@@ -1,3 +1,4 @@
+import json
 import os
 
 
@@ -15,3 +16,13 @@ def handler(request):
         "status": "ok",
         "message": "Vercel deploy is active. Mercari automation itself requires Selenium and Chrome and must run on a local or dedicated server."
     }
+
+
+def app(environ, start_response):
+    response = handler(None)
+    body = json.dumps(response).encode('utf-8')
+    start_response('200 OK', [('Content-Type', 'application/json')])
+    return [body]
+
+
+application = app
