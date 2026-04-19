@@ -1,0 +1,31 @@
+{
+  "schedule": {
+    "hour": 9,
+    "minute": 0,
+    "timezone": "Asia/Tokyo",
+    "enabled": true
+  },
+  "items": [
+    {
+      "item_id": "m123456789012345678",
+      "daily_reduction": 100,
+      "min_price": 500,
+      "max_reductions": 20,
+      "enabled": true,
+      "notes": "Example item 1"
+    },
+    {
+      "item_id": "m987654321098765432",
+      "daily_reduction": 200,
+      "min_price": 1000,
+      "max_reductions": null,
+      "enabled": true,
+      "notes": "Example item 2 - Higher reduction"
+    }
+  ],
+  "settings": {
+    "log_level": "DEBUG",
+    "headless_mode": true,
+    "debug_mode": false
+  }
+}
